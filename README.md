@@ -30,7 +30,7 @@ This app was developed with raw php, css.
  Put there content that you have cloned before.
 
 <h6>Login credentials:</h6>
-Username:Mantas
+Username:Mantas <br>
 Password:123456
 
 
