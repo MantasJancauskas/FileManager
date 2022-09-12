@@ -38,8 +38,3 @@ Password:123456
 ## Contact
 
 
-<<<<<<< HEAD
-Project Link: https://github.com/MantasJancauskas/FileManager
-=======
-Project Link: https://github.com/MantasJancauskas/FileManager
->>>>>>> 6d8d76a92845a29c0ce5e0d616cb88557f48e813
