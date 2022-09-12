@@ -132,7 +132,7 @@ print('<table>
             <th>Actions</th>'
 );
 foreach ($files_and_dirs as $fnd) {
-    if ($fnd != "." && $fnd != "..") {
+    if ($fnd != "." && $fnd != ".." && $fnd != ".git") {
 
         print('<tr>');
         print('<td>' . (is_dir($destiny . $fnd) ? "Directory" : "File") . '</td>');
