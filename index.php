@@ -61,6 +61,9 @@ if (isset($_FILES['image'])) {
         print_r($errors);
     }
 }
+
+//Upload and create folder btn
+
 print(' 
     <div class="">
         <form action="" method="POST" enctype="multipart/form-data">
@@ -132,7 +135,7 @@ print('<table>
             <th>Actions</th>'
 );
 foreach ($files_and_dirs as $fnd) {
-    if ($fnd != "." && $fnd != ".." && $fnd != ".git") {
+    if ($fnd != "." && $fnd != ".." && $fnd != ".git" && $fnd != "README.md") {
 
         print('<tr>');
         print('<td>' . (is_dir($destiny . $fnd) ? "Directory" : "File") . '</td>');
