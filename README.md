@@ -33,8 +33,3 @@ This app was developed with raw php, css.
 Username:Mantas <br>
 Password:123456
 
-
-
-## Contact
-
-
