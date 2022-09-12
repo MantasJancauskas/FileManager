@@ -52,7 +52,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">PASSWORD</label>
-                                <input name="Password" type="password" class="form-control" placeholder="123456" i>
+                                <input name="Password" type="password" class="form-control" placeholder="123456">
                             </div>
 
                             <div class="col-lg-12 loginbttm">

@@ -1,13 +1,16 @@
 * {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    
     box-sizing: border-box;
 }
 
+body {
+    background-color: #4a5e78;
+}
+
 .logoutText {
-    color: black;
+    color: #fff;
     text-align: center;
-    margin-right: 50px;
+    margin-bottom: 0;
 }
 
 table {
@@ -18,23 +21,25 @@ table {
 }
 
 table a {
-    background: rgb(231, 225, 225) ;
+    background: rgba(231, 225, 225, 0) ;
+    color: black;
 }
 
 table td,
 table th {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(0, 0, 0);
     padding: 8px;
-    background-color: rgb(231, 225, 225);
+    background-color: rgba(61, 130, 68, 0.8);
     min-width: 310px;
     padding-left: 20px;
+    color: #000;
 }
 
 table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color:#797D7F;
+    background:linear-gradient(to right, #459149, #4f32a0);
     color: black;
 }
 
@@ -70,33 +75,17 @@ table th {
 .createField{
     padding: 10px 5px 10px 10px;
     width: 40%;
-    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 1px, transparent 1px) 0% 0%/8px 8px no-repeat,            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 1px, transparent 1px) 100% 0%/8px 8px no-repeat,            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 1px, transparent 1px) 0% 100%/8px 8px no-repeat,            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 1px, transparent 1px) 100% 100%/8px 8px no-repeat,            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,            conic-gradient(#ff0000 0%, #ffff00 16.67%, #00ff00 33.33%, #00ffff 50%, #0000ff 66.67%, #ff00ff 83.33%, #ff0000 100%);border-radius: 8px;padding: 9px;box-sizing: border-box;
+    background: linear-gradient(to left, #459149, #4f32a0);
     margin: 2% 0 5% 5%;
     float: left;
 }
 
-
 .createInput {
    line-height: 2;
    width: 50%;
+   background-color: inherit;
 }
 
-.createButton {
-    border: 0;
-    line-height: 2;
-    padding: 0 20px;
-    font-size: 15px;
-    text-align: center;
-    color: white ;
-    border-radius: 10px;
-    background-color: #752d1e  ;
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px #9c2236 ;
-}
 
 .createButton:hover {
     background-color: #ff0000 ;
@@ -109,7 +98,7 @@ table th {
 
 .uploadField{
     padding: 10px 5px 10px 10px;
-    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 2px, transparent 2px) 0% 0%/8px 8px no-repeat,            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 2px, transparent 2px) 100% 0%/8px 8px no-repeat,            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 2px, transparent 2px) 0% 100%/8px 8px no-repeat,            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 2px, transparent 2px) 100% 100%/8px 8px no-repeat,            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,            conic-gradient(#ff0000 0%, #ffff00 16.67%, #00ff00 33.33%, #00ffff 50%, #0000ff 66.67%, #ff00ff 83.33%, #ff0000 100%);border-radius: 8px;padding: 9px;box-sizing: border-box;
+    background: linear-gradient(to left, #459149, #4f32a0);
     width: 40%;
     text-align: center;
     margin: 2% 5% 5% 0;
@@ -119,43 +108,38 @@ table th {
 .uploadInput {
     line-height: 2;
     width: auto;
-}
-
-.downloadBtn {
-    background-color: rgb(231, 225, 225);
-    color:  #5007d7;
-    border:rgb(231, 225, 225);
-    border-top: none;
-    border-bottom: 1px solid  #034f84;
-    font-weight: 600;
+    color: #fff;
 }
 
 .downloadBtn:hover {
     color: #F39C12;
 }
 
-.deleteBtn {
-    color: white;
-    background-color:#e80707;
-    border: none;
-    font-weight: 600;
-    padding: 3px 20px ;
-}
+
 .deleteBtn:hover {
     background-color: rgb(154, 12, 12);
 }
 
-.button {
-    background-color: rgb(231, 225, 225);
-}
 
 .navButton{
     color:#5007d7 ;
-
     line-height: 2;
     font-size: 20px;
 }
 
 .container {
     margin-bottom: 20px;
+}
+
+.former {
+    margin-bottom: 0;
+}
+
+.md-3 {
+    text-align: center;
+}
+
+::file-selector-button {
+    background-color: inherit;
+    color: #fff;
 }
