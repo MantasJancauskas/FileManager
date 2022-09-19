@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        <?php include 'css/style.css' ?>
+    </style>
+    <title>File System Browser</title>
+
+</head>
+
+<body>
+
 <?php
 session_start();
 
@@ -106,12 +123,12 @@ $deleteError = "";
 
 if (isset($_POST['delete']) && $_POST['delete'] !== 'index.php' && $_POST['delete'] !== 'README.md' && $_POST['delete'] !== 'test11.bmp' && $_POST['delete'] !== 'test12.bmp') {
     $deleteError = 'This file can not be deleted!';
-    $fileDelete = './' . $destiny  . $_POST['delete'];
-    $fileDeleteEscaped = str_replace("&nbsp;", " ", htmlentities($fileDelete, 0, 'utf-8'));
+    $fileDelete = './' .  $destiny . $_POST['delete']; // Bad delete path
+    $fileDeleteEscaped = str_replace("&nbsp;", " ", htmlentities($fileDelete, 0, 'utf-8')); // With white spaces deleter
 
-    if (is_file($fileDelete)) {
-        if (file_exists($fileDelete)) {
-            unlink($fileDelete);
+    if (is_file($fileDeleteEscaped)) {
+        if (file_exists($fileDeleteEscaped)) {
+            unlink($fileDeleteEscaped);
             header('refresh:1');
             print('<p class="warningDlt">File is deleted</p>');
         } else {
@@ -178,22 +195,7 @@ foreach ($files_and_dirs as $fnd) {
 print('</table>');
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <style>
-        <?php include 'css/style.css'; ?>
-    </style>
-    <title>File System Browser</title>
-
-</head>
-
-<body>
 
     <nav style="display: flex; justify-content: space-evenly">
 
